@@ -52,8 +52,12 @@ export function ErrorBoundary() {
   // when true, this is what used to go to `CatchBoundary`
   if (isRouteErrorResponse(error)) {
     errorElement = (
-      <main>
-        <p className="info-message">Something went wrong</p>
+      <main className="error">
+        <h1>An error occured!</h1>
+        <p>{error.data}</p>
+        <p>
+          Back to link <Link to="/">safety</Link>
+        </p>
       </main>
     );
   } else {
