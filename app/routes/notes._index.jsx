@@ -49,7 +49,7 @@ export async function action({ request }) {
 
   // save data
   const existingNotes = await getStoredNotes();
-  noteData.id = new Date().toISOString();
+  noteData.id = new Date().valueOf();
   const updatedNotes = existingNotes.concat(noteData);
   await storeNotes(updatedNotes);
 

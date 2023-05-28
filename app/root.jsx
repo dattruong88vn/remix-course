@@ -53,7 +53,7 @@ export function ErrorBoundary() {
   if (isRouteErrorResponse(error)) {
     errorElement = (
       <main>
-        <p className="info-message">Some thing went wrong</p>
+        <p className="info-message">Something went wrong</p>
       </main>
     );
   } else {
