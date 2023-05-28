@@ -48,3 +48,10 @@ export async function loader({ params }) {
 export function links() {
   return [{ rel: "stylesheet", href: styles }];
 }
+
+export function meta({ data }) {
+  return {
+    title: data.title,
+    description: data.content,
+  };
+}
